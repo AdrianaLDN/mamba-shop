@@ -1,0 +1,87 @@
+.navbar {
+    background-color: #414141;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    color: #fff;
+}
+
+
+.dropmenu {
+    z-index: 999;
+    height: 60%;
+    width: 20%;
+    padding-top: 2.5rem;
+}
+    
+.cart {
+    color: #fff;
+}
+
+.cart:hover {
+    transition: 0.6s ease-in-out;
+    transform: scale(1.5);
+}
+
+.cartNumber {
+    background-color: #ff7b00;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    width: 70%;
+    font-size: 1.5rem;
+    position: relative;
+    top: -65px;
+    left: 40px;
+}
+
+
+.dropmenu-opened {
+    width: auto;
+    z-index: 999;
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 1.7rem;
+    background-color: #414141;
+    z-index: 999;
+    padding: 0 14rem;
+}
+
+.drop-link {
+    /* color: #42e900; */
+    color: #fff;
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: 500;
+    padding: .8rem 0;
+}
+
+.drop-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    
+   
+}
+
+@media screen and (max-width: 960px) {
+
+}
