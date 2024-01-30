@@ -13,11 +13,12 @@
     z-index: 999;
     height: 60%;
     width: 20%;
-    padding-top: 2.5rem;
+    padding-top: 1.8rem;
 }
     
-.cart {
+.cart{
     color: #fff;
+    height: 30%;
 }
 
 .cart:hover {
