@@ -3,8 +3,8 @@ import './submit.css';
 
 function Submit() {
   return (
-    <div className='submit-msg'>
-        <p>Thank you for submitting!</p>
+    <div>
+        <p className='submit-msg'>Thank you for submitting!</p>
     </div>
   )
 }
