@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GiPlantsAndAnimals } from 'react-icons/gi';
 import { BsCart3 } from 'react-icons/bs';
 import './navbar.css';
@@ -28,6 +28,12 @@ function Navbar ({ handleClickOutside }) {
         };
       }, [isOpen]);
 
+      
+      const handleLinkClick = () => {
+        // Close the navbar when a link is clicked
+        setIsOpen(false);
+      };
+
 
     return (
        <div className='navbar'>
@@ -41,12 +47,12 @@ function Navbar ({ handleClickOutside }) {
             toggle={() => setIsOpen(!isOpen)} size={200} />
             {isOpen && (
                 <div className='links-list'>
-                    <Link className='drop-link' to='/'>Home</Link>
-                    <Link className='drop-link' to='/tshirts'>TShirts</Link>
-                    <Link className='drop-link' to='/jumpers'>Jumpers</Link>
-                    <Link className='drop-link' to='/skirts'>Skirts</Link>
-                    <Link className='drop-link' to='/trousers'>Trousers</Link>
-                    <Link className='drop-link' to='/socks'>Socks</Link> 
+                    <NavLink className='drop-link' activeClassName='active' to='/' onClick={handleLinkClick}>Home</NavLink>
+                    <NavLink className='drop-link' activeClassName='active' to='/tshirts' onClick={handleLinkClick}>TShirts</NavLink>
+                    <NavLink className='drop-link' activeClassName='active' to='/jumpers' onClick={handleLinkClick}>Jumpers</NavLink>
+                    <NavLink className='drop-link' activeClassName='active' to='/skirts' onClick={handleLinkClick}>Skirts</NavLink>
+                    <NavLink className='drop-link' activeClassName='active' to='/trousers' onClick={handleLinkClick}>Trousers</NavLink>
+                    <NavLink className='drop-link' activeClassName='active' to='/socks' onClick={handleLinkClick}>Socks</NavLink> 
                 </div>
             )}
             </div>
