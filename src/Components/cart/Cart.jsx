@@ -7,11 +7,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Cart () {
-    const { cartItems, getTotalAmount } = useContext(ShopContext);
+    const { cartItems, getTotalAmount, removeAll } = useContext(ShopContext);
     const totalAmount = getTotalAmount();
 
     //hook to navigate between pages!!!
     const navigate = useNavigate();
+ 
   
     return (
         <div>
@@ -36,7 +37,10 @@ function Cart () {
                         <button onClick={() => navigate('/')}> Continue Shopping </button>
     
                         {totalAmount > 0 ? (
+                           <>
+                            <button onClick={() => removeAll()}> Remove All </button>
                             <button onClick={() => navigate('/checkout')}> Checkout </button>
+                            </>
                         ) : (
                             <button disabled> Checkout </button>
                         )}

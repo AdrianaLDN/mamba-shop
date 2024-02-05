@@ -3,9 +3,10 @@ import { useState } from "react";
 import './checkout.css';
 import validator from 'validator';
 import { useNavigate } from 'react-router-dom';
+// import { ShopContext } from '../../context/shop-context';
 
 function Checkout() {
-    
+ 
     const navigate = useNavigate();
 
     //Handling Title
@@ -44,6 +45,7 @@ function Checkout() {
     const [submit, setSubmit] = useState(false);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [proceed, setProceed] = useState(false);
     
     const handleCheckbox = () => {
         setIsChecked(!isChecked); 
@@ -56,6 +58,8 @@ function Checkout() {
         e.preventDefault();
         setSubmit(true);
 
+        // console.log("submitted!!!");
+
         if (!title || !firstName || !lastName || !email || !mobile || !isChecked) {
             setSubmit(true);
             return;
@@ -65,7 +69,7 @@ function Checkout() {
   return (
     <div className='checkout'>
         <h3>Checkout</h3>
-        <form className='form' onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit} noValidate>
             <select value={title} className='input' onChange={handleChange}>
                 <option value='' placeholder='Title'>--Title--</option>
                 <option value='Miss'>Miss</option>
@@ -98,7 +102,7 @@ function Checkout() {
             <input type='submit' value='Save and Proceed' className='submit' />
 
             {submit && isChecked && navigate('/submit') }
-                
+            
         </form>
     </div>
   )
