@@ -1,8 +1,7 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useNavigate } from "react";
 import './checkout.css';
 import validator from 'validator';
-import { useNavigate } from 'react-router-dom';
 // import { ShopContext } from '../../context/shop-context';
 
 function Checkout() {
@@ -44,9 +43,9 @@ function Checkout() {
     const [isChecked, setIsChecked] = useState(false);
     const [submit, setSubmit] = useState(false);
     const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [proceed, setProceed] = useState(false);
-    
+    const [lastName, setLastName] = useState('');    
+
+
     const handleCheckbox = () => {
         setIsChecked(!isChecked); 
     };
