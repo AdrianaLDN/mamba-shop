@@ -1,7 +1,8 @@
 import React from 'react';
-import { useState, useNavigate } from "react";
+import { useState } from "react";
 import './checkout.css';
 import validator from 'validator';
+import { useNavigate } from 'react-router-dom';
 // import { ShopContext } from '../../context/shop-context';
 
 function Checkout() {
