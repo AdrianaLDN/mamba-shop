@@ -1,11 +1,14 @@
-import React from 'react'; 
+import React, { useContext, useEffect } from 'react'; 
+import { ShopContext } from '../../context/shop-context';
 import './submit.css';
 
 function Submit() {
-  // useEffect(() => {
-  //   sessionStorage.clear();
-  //   localStorage.clear();
-  // }, []);
+  
+  const { removeAll } = useContext(ShopContext);
+  useEffect(() => {
+
+    removeAll();
+  }, [removeAll]);
 
   return (
     <div>

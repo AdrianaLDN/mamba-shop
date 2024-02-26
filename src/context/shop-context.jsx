@@ -53,7 +53,7 @@ export const ShopContextProv = (props) => {
   };
 
   const removeAll = () => {
-    setCartItems([]);
+    setCartItems(getDefaultCart());
   }
 
   const contextValue = { cartItems, addToCart, removeFromCart, manualCartItem, getTotalAmount, getTotalItems, removeAll };
